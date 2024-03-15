@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'madimi': ['Madimi One', 'sans-serif'],
+      
+    },
   },
   plugins: [],
 }
