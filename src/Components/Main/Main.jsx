@@ -14,8 +14,12 @@ const Main = () => {
       .then((res) => res.json())
       .then((data) => setApi(data));
   }, []);
+
+
   function hour(credit,d) {
-    console.log("clicked", credit,"d",d);
+    console.log("d is",d)
+    let newCourse = [...course,d]
+    setCourse(newCourse)
     let newTime = time + credit;
     setTime(newTime)
   }
@@ -36,7 +40,7 @@ const Main = () => {
         ))}
       </div>
       <div className="right p-5">
-        <MyCart time={time}></MyCart>
+        <MyCart time={time} course={course}></MyCart>
       </div>
     </div>
   );

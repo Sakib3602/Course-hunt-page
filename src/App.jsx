@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-    <div className='w-full lg:w-[1220px] m-auto'>
+    <div className='w-full lg:w-[1320px] m-auto'>
     <NavBar></NavBar>
     <Main></Main>
     </div>
