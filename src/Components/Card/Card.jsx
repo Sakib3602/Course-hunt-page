@@ -3,7 +3,9 @@ import { IoPricetag } from "react-icons/io5";
 import { LiaCreditCardSolid } from "react-icons/lia";
 
 const Card = ({ api, hour }) => {
-  const { name, description, photo, price, id, credit } = api;
+  const { name, description, photo, price, credit } = api;
+
+  
 
   return (
     <div>
@@ -31,6 +33,16 @@ const Card = ({ api, hour }) => {
   );
 };
 
-Card.propTypes = {};
+Card.propTypes = {
+    hour: PropTypes.func,
+    api : PropTypes.array,
+    name:  PropTypes.string,
+    description:  PropTypes.string,
+    photo:  PropTypes.img,
+    price:  PropTypes.number,
+    id :  PropTypes.number,
+    credit: PropTypes.number,
+   
+};
 
 export default Card;

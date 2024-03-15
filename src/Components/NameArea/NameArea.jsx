@@ -13,6 +13,7 @@ const NameArea = ({course}) => {
 }
 
 NameArea.propTypes = {
+    course : PropTypes.string
 
 }
 
