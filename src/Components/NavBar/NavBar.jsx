@@ -21,27 +21,20 @@ const NavBar = () => {
                 <li><a>Paid Courses</a></li>
               </ul>
             </li>
-            <li><a>Contact</a></li>
+          
           </ul>
         </div>
 
 
-        <a className="btn btn-ghost text-3xl text-[#494A72]">Crash Courses</a>
+        <a className="font-[700] text-3xl text-[#494A72]">Crash Courses</a>
       </div>
 
 
       <div className="navbar  hidden lg:flex ">
         <ul className="menu menu-horizontal px-1 text-[16px]">
           <li><a>Home</a></li>
-          <li>
-            <details>
-              <summary>Our Courses</summary>
-              <ul className="p-2">
-              <li><a>Free Courses</a></li>
-                <li><a>Paid Courses</a></li>
-              </ul>
-            </details>
-          </li>
+          <li><a>Our Courses</a></li>
+          
           <li><a>Contact</a></li>
         </ul>
       </div>
