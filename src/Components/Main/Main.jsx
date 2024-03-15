@@ -6,7 +6,8 @@ import MyCart from "../MyCart/MyCart";
 const Main = () => {
   const [api, setApi] = useState([]);
   const [time, setTime] = useState(0);
-  const [course,setCourse] = useState([])
+  const [course, setCourse] = useState([]);
+  const [p, setP] = useState(0);
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/samiulalimsaad/ph-course-registration/main/public/courses.json"
@@ -15,32 +16,25 @@ const Main = () => {
       .then((data) => setApi(data));
   }, []);
 
-
-  function hour(credit,d) {
-    console.log("d is",d)
-    let newCourse = [...course,d]
-    setCourse(newCourse)
+  function hour(credit, d, price) {
+    console.log("d is", d);
+    let newCourse = [...course, d];
+    setCourse(newCourse);
     let newTime = time + credit;
-    setTime(newTime)
+    setTime(newTime);
+
+    setP(p + price);
   }
-
-
-  
-
-
-
-
-
 
   return (
     <div className="flex justify-between mt-11">
       <div className="left grid grid-cols-3 gap-5">
         {api.map((element, i) => (
-          <Card key={i} hour={hour}  api={element}></Card>
+          <Card key={i} hour={hour} api={element}></Card>
         ))}
       </div>
       <div className="right p-5">
-        <MyCart time={time} course={course}></MyCart>
+        <MyCart p={p} time={time} course={course}></MyCart>
       </div>
     </div>
   );
